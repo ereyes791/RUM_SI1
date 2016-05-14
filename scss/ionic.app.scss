@@ -15,9 +15,255 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+// ------------ Color ---------------
+// ----------------------------------
+
+$c-light-brown:                   #d9c27c !default;
+$c-dark-brown:                    #a7883a !default;
+$c-light-red:                     #e67f76 !default;
+$c-dark-red:                      #b43f3f !default;
+$c-light-black:                   #797474 !default;
+$c-dark-black:                    #282828 !default;
+$c-light-orange:                  #ecbf85 !default;
+$c-dark-orange:                   #d58b4f !default;
+
+$r-clean:                         #f5f3f8 !default;
+$r-silver:                        #eff4f2 !default;
+$r-gold:                          #ea9c1e !default;
+$r-sandy-gold:                    #d6ac48 !default;
+$r-amber:                         #ffbf00 !default;
+$r-saddle-brown:                  #762e06 !default;
+$r-firebrick:                     #b21802 !default;
+$r-sienna:                        #805c44 !default;
+// ------------ Button --------------
+// ----------------------------------
+
+$button-light-brown-bg:           $c-light-brown !default;
+$button-light-brown-text:         #fff !default;
+$button-light-brown-border:       darken($c-light-brown, 10%) !default;
+$button-light-brown-active-bg:    darken($c-light-brown, 10%) !default;
+$button-light-brown-active-border:darken($c-light-brown, 10%) !default;
+
+$button-dark-brown-bg:            $c-dark-brown !default;
+$button-dark-brown-text:          #fff !default;
+$button-dark-brown-border:        darken($c-dark-brown, 10%) !default;
+$button-dark-brown-active-bg:     darken($c-dark-brown, 10%) !default;
+$button-dark-brown-active-border: darken($c-dark-brown, 10%) !default;
+
+
+$button-light-red-bg:             $c-light-red !default;
+$button-light-red-text:           #fff !default;
+$button-light-red-border:         darken($c-light-red, 10%) !default;
+$button-light-red-active-bg:      darken($c-light-red, 10%) !default;
+$button-light-red-active-border:  darken($c-light-red, 10%) !default;
+
+$button-dark-red-bg:              $c-dark-red !default;
+$button-dark-red-text:            #fff !default;
+$button-dark-red-border:          darken($c-dark-red, 10%) !default;
+$button-dark-red-active-bg:       darken($c-dark-red, 10%) !default;
+$button-dark-red-active-border:   darken($c-dark-red, 10%) !default;
+
+$button-light-black-bg:           $c-light-black !default;
+$button-light-black-text:         #fff !default;
+$button-light-black-border:       darken($c-light-black, 10%) !default;
+$button-light-black-active-bg:    darken($c-light-black, 10%) !default;
+$button-light-black-active-border:darken($c-light-black, 10%) !default;
+
+$button-dark-black-bg:            $c-dark-black !default;
+$button-dark-black-text:          #fff !default;
+$button-dark-black-border:        darken($c-dark-black, 10%) !default;
+$button-dark-black-active-bg:     darken($c-dark-black, 10%) !default;
+$button-dark-black-active-border: darken($c-dark-black, 10%) !default;
+
+$button-light-orange-bg:           $c-light-orange !default;
+$button-light-orange-text:         #fff !default;
+$button-light-orange-border:       darken($c-light-orange, 10%) !default;
+$button-light-orange-active-bg:    darken($c-light-orange, 10%) !default;
+$button-light-orange-active-border:darken($c-light-orange, 10%) !default;
+
+$button-dark-orange-bg:           $c-dark-orange !default;
+$button-dark-orange-text:         #fff !default;
+$button-dark-orange-border:       darken($c-dark-orange, 10%) !default;
+$button-dark-orange-active-bg:    darken($c-dark-orange, 10%) !default;
+$button-dark-orange-active-border:darken($c-dark-orange, 10%) !default;
+
+// ------------ Logo ----------------
+// ----------------------------------
+
+.logo{
+    position: sticky;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    opacity: 0.5;
+    width: 50%;
+    height: 50%;
+}
+
+// ------------ Page ----------------
+// ----------------------------------
+.page-light-red{
+    background-color: $c-light-red;
+}
+
+.page-light-orange{
+  background-color: $c-light-orange;
+}
+
+.page-light-black{
+  background-color: $c-light-black;
+}
+
+.page-light-brown{
+  background-color: $c-light-brown;
+}
+
+// ------------ Text ----------------
+// ----------------------------------
+
+.review{
+  text-align: center;
+  margin : 0 auto;
+  font-size: 18px;
+  color: $c-dark-black;
+  text-transform: capitalize;
+  padding: 3px;
+
+  &.review-small{
+    padding: 2px;
+    font-size: 15px;
+  }
+
+  &.review-written{
+    font-style: italic;
+    text-shadow: 1;
+    text-transform: inherit;
+    padding: 5px;
+    line-height: 1.35;
+  }
+
+  &.review-emphasis{
+    text-transform: capitalize;
+    font-style: oblique;
+  }
+}
+
+.selection{
+  text-align: center;
+  font-size: 30px;
+  text-transform: capitalize;
+  opacity: 0.6;
+
+  &.selection-small{
+    padding: 2px;
+    font-size: 17px;
+  }
+}
+
+.information{
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.70;
+  padding: 4px;
+  text-overflow: clip;
+
+  &.information-small{
+    padding: 1px;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  &.information-element{
+    padding: 1px;
+    font-family:  sans-serif;
+    line-height: 1.5;
+  }
+}
+
+// ------------ Icon ----------------
+// ----------------------------------
+
+.color-icon{
+  position: inherit;
+  margin: 0 auto; //centers de object
+  content: url(../img/f5f3f8.jpg);
+  opacity: 0.95;
+
+  &.clean{
+    //@include color-icon-style($r-clean);
+    content: url(../img/f5f3f8.jpg);
+    position:relative;
+  }
+  &.silver{
+    //@include color-icon-style($r-silver);
+    content: url(../img/eff4f2.jpg);
+  }
+  &.gold{
+    //@include color-icon-style($r-gold);
+    content: url(../img/ea9c1e.jpg);
+  }
+  &.sandy{ //supposed to be sangy-gold but had some problems with the lecture at COLOR
+    //@include color-icon-style($r-sandy-gold);
+    content: url(../img/d6ac48.jpg);
+  }
+  &.amber{
+    //@include color-icon-style($r-amber);
+    content: url(../img/ffbf00.jpg);
+  }
+  &.saddle{ //supposed to be saddle-brown but had some problems with the lecture at COLOR
+    //@include color-icon-style($r-saddle-brown);
+    content: url(../img/762e06.jpg);
+  }
+  &.firebrick{
+    //@include color-icon-style($r-firebrick);
+    content: url(../img/b21802.jpg);
+  }
+  &.sienna{
+    //@include color-icon-style($r-sienna);
+    content: url(../img/805c44.jpg);
+  }
+}
+
+// ------------ Image ---------------
+// ----------------------------------
+
+.image-instruction{
+  position: relative;
+  margin: 0 auto;
+  padding: 7px;
+
+  &.information{
+      content: url(../img/help-info.jpg);
+      opacity: 0.95;
+  }
+
+  &.color{
+      content: url(../img/help-color.png);
+      opacity: 0.8;
+  }
+
+  &.taste{
+      content: url(../img/help-taste.jpg);
+      opacity: 0.8;
+  }
+
+  &.smell{
+      content: url(../img/help-smell.jpg);
+      opacity: 0.8;
+  }
+
+}
+
+// ------------ Mixin ---------------
+// ----------------------------------
+
+//@mixin color-icon-style($color){
+//  content: url(../img/$color.jpg);
+//}
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-

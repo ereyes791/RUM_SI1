@@ -24,7 +24,7 @@
   text-align: center;
 
   text-overflow: ellipsis;
-  font-size: $button-font-size;
+  font-size: $button-large-font-size;
   line-height: $button-height - $button-border-width + 1px;
 
   cursor: pointer;
@@ -71,56 +71,104 @@
     margin-bottom: $button-block-margin;
   }
 
+  &.button-light-brown{
+    @include button-style($button-light-brown-bg, $button-light-brown-border, $button-light-brown-bg, $button-light-brown-border, $button-light-brown-text);
+    @include button-clear($button-light-brown-border);
+    @include button-outline($button-light-brown-border);
+  }
+
+  &.button-dark-brown{
+    @include button-style($button-dark-brown-bg, $button-dark-brown-border, $button-dark-brown-bg, $button-dark-brown-border, $button-dark-brown-text);
+    @include button-clear($button-dark-brown-border);
+    @include button-outline($button-dark-brown-border);
+  }
+
+  &.button-light-red{
+    @include button-style($button-light-red-bg, $button-light-red-border, $button-light-red-bg, $button-light-red-border, $button-light-red-text);
+    @include button-clear($button-light-red-border);
+    @include button-outline($button-light-red-border);
+  }
+
+  &.button-dark-red{
+    @include button-style($button-dark-red-bg, $button-dark-red-border, $button-dark-red-bg, $button-dark-red-border, $button-dark-red-text);
+    @include button-clear($button-dark-red-border);
+    @include button-outline($button-dark-red-border);
+  }
+
+  &.button-light-black{
+    @include button-style($button-light-black-bg, $button-light-black-border, $button-light-black-bg, $button-light-black-border, $button-light-black-text);
+    @include button-clear($button-light-black-border);
+    @include button-outline($button-light-black-border);
+  }
+
+  &.button-dark-black{
+    @include button-style($button-dark-black-bg, $button-dark-black-border, $button-dark-black-bg, $button-dark-black-border, $button-dark-black-text);
+    @include button-clear($button-dark-black-border);
+    @include button-outline($button-dark-black-border);
+  }
+
+  &.button-light-orange{
+    @include button-style($button-light-orange-bg, $button-light-orange-border, $button-light-orange-bg, $button-light-orange-border, $button-light-orange-text);
+    @include button-clear($button-light-orange-border);
+    @include button-outline($button-light-orange-border);
+  }
+
+  &.button-dark-orange{
+    @include button-style($button-dark-orange-bg, $button-dark-orange-border, $button-dark-orange-bg, $button-dark-orange-border, $button-dark-orange-text);
+    @include button-clear($button-dark-orange-border);
+    @include button-outline($button-dark-orange-border);
+  }
+
   &.button-light {
-    @include button-style($button-light-bg, $button-default-border, $button-light-active-bg, $button-default-active-border, $button-light-text);
+    @include button-style($button-light-bg, $button-light-border, $button-light-active-bg, $button-light-active-border, $button-light-text);
     @include button-clear($button-light-border);
     @include button-outline($button-light-border);
   }
 
   &.button-stable {
-    @include button-style($button-stable-bg, $button-default-border, $button-stable-active-bg, $button-default-active-border, $button-stable-text);
+    @include button-style($button-stable-bg, $button-stable-border, $button-stable-active-bg, $button-stable-active-border, $button-stable-text);
     @include button-clear($button-stable-border);
     @include button-outline($button-stable-border);
   }
 
   &.button-positive {
-    @include button-style($button-positive-bg, $button-default-border, $button-positive-active-bg, $button-default-active-border, $button-positive-text);
+    @include button-style($button-positive-bg, $button-positive-border, $button-positive-active-bg, $button-positive-active-border, $button-positive-text);
     @include button-clear($button-positive-bg);
     @include button-outline($button-positive-bg);
   }
 
   &.button-calm {
-    @include button-style($button-calm-bg, $button-default-border, $button-calm-active-bg, $button-default-active-border, $button-calm-text);
+    @include button-style($button-calm-bg, $button-calm-border, $button-calm-active-bg, $button-calm-active-border, $button-calm-text);
     @include button-clear($button-calm-bg);
     @include button-outline($button-calm-bg);
   }
 
   &.button-assertive {
-    @include button-style($button-assertive-bg, $button-default-border, $button-assertive-active-bg, $button-default-active-border, $button-assertive-text);
+    @include button-style($button-assertive-bg, $button-assertive-border, $button-assertive-active-bg, $button-assertive-active-border, $button-assertive-text);
     @include button-clear($button-assertive-bg);
     @include button-outline($button-assertive-bg);
   }
 
   &.button-balanced {
-    @include button-style($button-balanced-bg, $button-default-border, $button-balanced-active-bg, $button-default-active-border, $button-balanced-text);
+    @include button-style($button-balanced-bg, $button-balanced-border, $button-balanced-active-bg, $button-balanced-active-border, $button-balanced-text);
     @include button-clear($button-balanced-bg);
     @include button-outline($button-balanced-bg);
   }
 
   &.button-energized {
-    @include button-style($button-energized-bg, $button-default-border, $button-energized-active-bg, $button-default-active-border, $button-energized-text);
+    @include button-style($button-energized-bg, $button-energized-border, $button-energized-active-bg, $button-energized-active-border, $button-energized-text);
     @include button-clear($button-energized-bg);
     @include button-outline($button-energized-bg);
   }
 
   &.button-royal {
-    @include button-style($button-royal-bg, $button-default-border, $button-royal-active-bg, $button-default-active-border, $button-royal-text);
+    @include button-style($button-royal-bg, $button-royal-border, $button-royal-active-bg, $button-royal-active-border, $button-royal-text);
     @include button-clear($button-royal-bg);
     @include button-outline($button-royal-bg);
   }
 
   &.button-dark {
-    @include button-style($button-dark-bg, $button-default-border, $button-dark-active-bg, $button-default-active-border, $button-dark-text);
+    @include button-style($button-dark-bg, $button-dark-border, $button-dark-active-bg, $button-dark-active-border, $button-dark-text);
     @include button-clear($button-dark-bg);
     @include button-outline($button-dark-bg);
   }

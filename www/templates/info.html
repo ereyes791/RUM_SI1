@@ -1,0 +1,68 @@
+<ion-view view-title="INFORMATION">
+  <ion-content >
+
+<!--Selectors and labels-->
+    <label class="item item-input item-select">
+      <div class="input-label">
+        BRAND
+      </div>
+      <select class="selection small" ng-model="note.brand">
+          <option value="" selected >----</option>
+        <option ng-repeat="rumName in brand" >{{rumName.brand}}</option>
+      </select>
+    </label>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        NAME
+      </div>
+      <select class="selection small" ng-model="note.rumName" >
+        <option value="" selected>----</option>
+          <option  ng-repeat="rumName in rum" ng-if='rumName.brand==note.brand' >{{rumName.name}}</option>
+      </select>
+    </label>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        YEAR
+      </div>
+      <select ng-model="note.age">
+        <option value="" selected>----</option>
+<!--Caveman way of doing this. Need to fix-->
+        <option> 2015 </option>
+        <option> 2014 </option>
+        <option> 2013 </option>
+        <option> 2012 </option>
+        <option> 2011 </option>
+        <option> 2010 </option>
+        <option> 2009 </option>
+        <option> 2008 </option>
+        <option> 2007 </option>
+        <option> 2006 </option>
+        <option> 2005 </option>
+        <option> 2004 </option>
+        <option> 2003 </option>
+        <option> 2002 </option>
+        <option> 2001 </option>
+        <option> 2000 </option>
+        <option> 1999 </option>
+        <option> 1998 </option>
+        <option> 1997 </option>
+        <option> 1996 </option>
+
+      </select>
+    </label>
+
+<!--Buttons-->
+<a class="button button-full button-light-orange" href="#/app/color" ng-show="note.brand!=null && note.rumName!=null && note.age!=null">
+  CONTINUE
+</a>
+<a class="button button-full button-light-red" href="#/app/help-info">
+  HELP
+</a>
+<a class="button button-full button-light-black" href="#/app/menu">
+  CANCEL NOTE
+</a>
+
+  </ion-content>
+</ion-view>
