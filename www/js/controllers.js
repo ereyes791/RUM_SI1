@@ -16,7 +16,7 @@ this.getColor = function(callbackFunc) {
     }).error(function(){
         alert("error");
     });
- }
+ };
  this.getSmell = function(callbackFunc) {
      $http({
          method: 'GET',
@@ -27,7 +27,7 @@ this.getColor = function(callbackFunc) {
      }).error(function(){
          alert("error");
      });
-  }
+  };
   this.getNotes = function(callbackFunc) {
       $http({
           method: 'GET',
@@ -38,7 +38,7 @@ this.getColor = function(callbackFunc) {
       }).error(function(){
           alert("error");
       });
-   }
+   };
   this.getTaste = function(callbackFunc) {
       $http({
           method: 'GET',
@@ -49,7 +49,7 @@ this.getColor = function(callbackFunc) {
       }).error(function(){
           alert("error");
       });
-   }
+   };
    this.getRum = function(callbackFunc) {
        $http({
            method: 'GET',
@@ -65,19 +65,46 @@ this.getColor = function(callbackFunc) {
     }
 });
 
-ctrl.controller('tasteNotecontroller', function($scope, dataService, $http) {
+ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ionicModal) {
   $scope.search={};
   $scope.choice='';
   $scope.choice2='';
   $scope.choice3='';
   $scope.refresh
 $scope.note={brand: ''};
+
+    $ionicModal.fromTemplateUrl('templates/help-info.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal1) {
+        $scope.modal1 = modal1;
+    });
+    $scope.openModal = function() {
+        $scope.modal1.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modal1.hide();
+    };
+
+    $ionicModal.fromTemplateUrl('templates/help-color.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal2) {
+        $scope.modal2 = modal2;
+    });
+    $scope.openModal = function() {
+        $scope.modal2.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modal2.hide();
+    };
+
     $scope.color = dataService.getColor(function(dataResponse) {
        $scope.color = dataResponse;
 
     });
     $scope.smell = dataService.getSmell(function(dataResponse) {
-      $scope.checked = {word: ''}
+      $scope.checked = {word: ''};
       $scope.itensitySmel= 3;
       $scope.smell = dataResponse;
       $scope.smells=$scope.pudge($scope.smell,$scope.checked.word);
@@ -88,7 +115,7 @@ $scope.note={brand: ''};
 
     });
     $scope.taste = dataService.getTaste(function(dataResponse) {
-      $scope.checked2 = {word: ''}
+      $scope.checked2 = {word: ''};
       $scope.itensityTaste= 3;
       $scope.taste = dataResponse;
       $scope.tastes=$scope.pudge($scope.taste,$scope.checked2.word);
@@ -117,7 +144,7 @@ $scope.note={brand: ''};
         }
       }
       return array;
-    }
+    };
     $scope.nonrepeatbrand=function(rum) {
       var array2=[];
       for (var i = 0; i < rum.length; i++) {
@@ -127,7 +154,7 @@ $scope.note={brand: ''};
 
     }
       return array2;
-    }
+    };
     $scope.repeatword=function(word,array) {
       for (var j = 0; j < array.length; j++) {
         if(array[j].brand==word){
@@ -135,7 +162,7 @@ $scope.note={brand: ''};
         }
       }
       return false;
-    }
+    };
     $scope.pudge=function(smell,word){
     var array =[];
       for (var i = 0; i <smell.length; i++) {
@@ -163,7 +190,7 @@ $scope.note={brand: ''};
         }
       }
       return id;
-    }
+    };
 
     $scope.postNote=function (rum,taste,smell,color){
      var data ={
