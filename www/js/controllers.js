@@ -1,5 +1,6 @@
-'use strict';
+
 var  ctrl=angular.module('starter.controllers', ['ionic'])
+
 
 ctrl.service('dataService', function($http) {
 this.getColor = function(callbackFunc) {
@@ -66,12 +67,12 @@ this.getColor = function(callbackFunc) {
 });
 
 ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ionicModal) {
-  $scope.search={};
+
+
   $scope.choice='';
   $scope.choice2='';
   $scope.choice3='';
-  $scope.refresh
-$scope.note={brand: ''};
+  $scope.note={brand: ''};
 
     $ionicModal.fromTemplateUrl('templates/help-info.html', {
         scope: $scope,
@@ -126,9 +127,15 @@ $scope.note={brand: ''};
 
     });
     $scope.rum = dataService.getRum(function(dataResponse) {
+      $scope.checked3 = {word: ''};
       $scope.rum = dataResponse;
       $scope.brand=$scope.nonrepeatbrand($scope.rum);
+      $scope.brands=$scope.pudge1($scope.brand,$scope.checked3.word);
       $scope.name=$scope.relatedto($scope.rum);
+
+      $scope.refresh3=function(){
+        $scope.brands=$scope.pudge1($scope.brand,$scope.checked3.word);
+      };
 
     });
     $scope.notes = dataService.getNotes(function(dataResponse) {
@@ -181,6 +188,16 @@ $scope.note={brand: ''};
       }
       return array;
     };
+  $scope.pudge1=function(smell,word){
+    var array =[];
+    for (var i = 0; i <smell.length; i++) {
+      if(smell[i].brand==word){
+              array.push(smell[i]);
+
+        }
+      }
+    return array;
+  };
 
     $scope.getID=function (word,rum) {
       var id = 0;

@@ -1,34 +1,24 @@
 <ion-view view-title="INFORMATION">
   <ion-content >
+    <h2>Brand</h2>
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="Type a word to search" ng-model="checked3.word">
+      </label>
+    </div>
 
-<!--Selectors and labels-->
-    <label class="item item-input item-select">
-      <div class="input-label">
-        BRAND
-      </div>
-      <select class="selection small" ng-model="note.brand">
-          <option value="" selected >----</option>
-        <option ng-repeat="rumName in brand" >{{rumName.brand}}</option>
-      </select>
-    </label>
+    <ion-radio class="selection" ng-repeat="brand in brand" name="group1"  ng-if="brand.brand==checked3.word" ng-model="note.brand">{{brand.brand}}</ion-radio>
+  <div ng-if="checked3.word!=''">
+    <h2>Name</h2>
 
-    <label class="item item-input item-select">
-      <div class="input-label">
-        NAME
-      </div>
-      <select class="selection small" ng-model="note.rumName" >
-        <option value="" selected>----</option>
-          <option  ng-repeat="rumName in rum" ng-if='rumName.brand==note.brand' >{{rumName.name}}</option>
-      </select>
-    </label>
+    <ion-radio name="group2" class="selection" ng-repeat="rumName in rum" ng-if="rumName.brand==checked3.word" ng-model="note.rumName">{{rumName.name}}</ion-radio>
 
+    <h2>Year</h2>
     <label class="item item-input item-select">
-      <div class="input-label">
-        YEAR
-      </div>
+      <div><br><br><br>
       <select ng-model="note.age">
         <option value="" selected>----</option>
-<!--Caveman way of doing this. Need to fix-->
+        <!--Caveman way of doing this. Need to fix-->
         <option> 2015 </option>
         <option> 2014 </option>
         <option> 2013 </option>
@@ -51,9 +41,22 @@
         <option> 1996 </option>
 
       </select>
+      </div>
     </label>
-
+    </div>
+<!--Selectors and labels-->
+      <!--  <div class="input-label">
+          BRAND
+        </div>
+        <select class="selection small" ng-model="note.brand">
+            <option value="" selected >----</option>
+          <option ng-repeat="rumName in brand" >{{rumName.brand}}</option>
+        </select>
+      </label>
+  -->
+      <br>
 <!--Buttons-->
+
 <a class="button button-full button-light-orange" href="#/app/color" ng-show="note.brand!=null && note.rumName!=null && note.age!=null">
   CONTINUE
 </a>
