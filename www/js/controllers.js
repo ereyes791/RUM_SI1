@@ -100,6 +100,19 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
         $scope.modal2.hide();
     };
 
+    $ionicModal.fromTemplateUrl('templates/help-smell.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal3) {
+        $scope.modal3 = modal3;
+    });
+    $scope.openModal = function() {
+        $scope.modal3.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modal3.hide();
+    };
+
     $scope.color = dataService.getColor(function(dataResponse) {
        $scope.color = dataResponse;
 
