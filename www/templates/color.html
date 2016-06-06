@@ -1,5 +1,22 @@
 <ion-view >
-  <ion-content>
+
+    <ion-tabs class="tabs-assertive tabs-icon-top">
+        <ion-tab></ion-tab>
+        <ion-tab title="Continue" icon-on="ion-checkmark-round"  icon-off="ion-checkmark-round" href="#/app/smell">
+            <!-- Tab 1 content -->
+        </ion-tab>
+
+
+        <ion-tab title="Help" icon-on="ion-help" icon-off="ion-help" ng-click="modal2.show()">
+            <!-- Tab 2 content -->
+        </ion-tab>
+
+        <ion-tab title="Return" icon-on="ion-arrow-left-c" icon-off="ion-arrow-left-c" href="#/app/info">
+            <!-- Tab 3 content -->
+        </ion-tab>
+        <ion-tab></ion-tab>
+    </ion-tabs>
+    <ion-content>
 
     <ion-radio class="radio-selector" ng-repeat="test in color" ng-value="test.id" ng-model="note.color">
       <div class="color-icon {{test.name}}" >
@@ -9,17 +26,6 @@
       </div>
     </ion-radio>
     </div>
-
-<!--Buttons-->
-    <a class="button button-full button-light-orange" href="#/app/smell" ng-show="note.color!=null">
-    		OK! CONTINUE
-    </a>
-    <a class="button button-full button-light-red" ng-click="modal2.show()">
-    		HELP ME PLEASE
-    </a>
-    <a class="button button-full button-light-black" href="#/app/info">
-        RETURN
-    </a>
 
   </ion-content>
 </ion-view>

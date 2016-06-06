@@ -66,9 +66,8 @@ this.getColor = function(callbackFunc) {
     }
 });
 
-ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ionicModal) {
-
-
+ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ionicModal,$ionicSideMenuDelegate) {
+  $scope.toggleLeft = function(){$ionicSideMenuDelegate.toggleLeft();};
   $scope.choice='';
   $scope.choice2='';
   $scope.choice3='';

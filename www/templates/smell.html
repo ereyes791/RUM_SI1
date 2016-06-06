@@ -1,4 +1,22 @@
 <ion-view view-title="SMELL" style="page-light-black">
+
+    <ion-tabs class="tabs-assertive tabs-icon-top">
+        <ion-tab></ion-tab>
+        <ion-tab title="Continue" icon-on="ion-checkmark-round"  icon-off="ion-checkmark-round"  href="#/app/menu">
+            <!-- Tab 1 content -->
+        </ion-tab>
+
+
+        <ion-tab title="Help" icon-on="ion-help" icon-off="ion-help" ng-click="modal3.show()">
+            <!-- Tab 2 content -->
+        </ion-tab>
+
+        <ion-tab title="Return" icon-on="ion-arrow-left-c" icon-off="ion-arrow-left-c" href="#/app/color">
+            <!-- Tab 3 content -->
+        </ion-tab>
+        <ion-tab></ion-tab>
+    </ion-tabs>
+
   <ion-content>
             <div class="item item-input-inset">
               <label class="item-input-wrapper">
@@ -21,15 +39,6 @@
               </div>
          </div>
 -->
-<!--Buttons-->
-  <a class="button button-full button-light-orange" href="#/app/menu">
-  		NEXT STEP!
-  </a>
-  <a class="button button-full button-light-red" ng-click="modal3.show()">
-      HELP ME
-  </a>
-  <a class="button button-full button-light-black" href="#/app/color">
-      RETURN
-  </a>
+
   </ion-content>
 </ion-view>

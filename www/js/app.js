@@ -50,6 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
     .state('app.info', {
+      cache: false,
       url: '/info',
       views: {
         'menuContent': {
@@ -58,6 +59,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
         .state('app.color', {
+          cache: false,
       url: '/color',
       views: {
         'menuContent': {
@@ -66,6 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
         .state('app.smell', {
+          cache: false,
       url: '/smell',
       views: {
         'menuContent': {
