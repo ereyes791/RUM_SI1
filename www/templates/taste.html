@@ -1,0 +1,37 @@
+<ion-view view-title="TASTE">
+    <ion-tabs class="tabs-assertive tabs-icon-top">
+
+        <ion-tab></ion-tab>
+
+        <ion-tab title="Help" icon-on="ion-help" icon-off="ion-help" ng-click="modalt.show()">
+            <!-- Tab 2 content -->
+        </ion-tab>
+
+        <ion-tab title="PROGRESS" icon-on="ion-android-done-all" icon-off="ion-android-done-all" ng-click="modalp.show()">
+            <!-- Tab 3 content -->
+        </ion-tab>
+        <ion-tab></ion-tab>
+
+    </ion-tabs>
+
+    <ion-content>
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Taste" ng-model="checked2.word">
+            </label>
+            <button class="button button-small" ng-click="refresh2()">
+                Submit
+            </button>
+        </div>
+        <ion-radio class="selection" ng-repeat="test in tastes" ng-value="test.id" ng-model="note.taste">{{test.name}}</ion-radio>
+        <!-- Intensity bar
+            <div class="list">
+                <div class="item range range-positive">
+                  <i class="icon ion-minus-circled"></i>
+                  <input type="range" name="volume" min="1" max="3" value="2" ng-model='note.itensityTaste'>
+                  <i class="icon ion-plus-circled"></i>
+                </div>
+           </div>
+        -->
+    </ion-content>
+</ion-view>

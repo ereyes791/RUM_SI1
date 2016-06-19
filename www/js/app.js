@@ -78,6 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.taste', {
+        cache: false,
       url: '/taste',
       views: {
         'menuContent': {
@@ -134,14 +135,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   }
 })
-.state('app.help-color', {
- url: '/help-color',
- views: {
-   'menuContent': {
-     templateUrl: 'templates/help-color.html'
-   }
- }
-})
+      .state('app.progress', {
+          url: '/progress',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/Progress.html'
+              }
+          }
+      })
 
 
   // if none of the above states are matched, use this as the fallback

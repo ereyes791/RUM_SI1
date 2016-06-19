@@ -112,6 +112,31 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
         $scope.modal3.hide();
     };
 
+    $ionicModal.fromTemplateUrl('templates/Progress.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modalp) {
+        $scope.modalp = modalp;
+    });
+    $scope.openModal = function() {
+        $scope.modalp.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modalp.hide();
+    };
+    $ionicModal.fromTemplateUrl('templates/help-taste.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modalt) {
+        $scope.modalt = modalt;
+    });
+    $scope.openModal = function() {
+        $scope.modalt.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modalt.hide();
+    };
+
     $scope.color = dataService.getColor(function(dataResponse) {
        $scope.color = dataResponse;
 
