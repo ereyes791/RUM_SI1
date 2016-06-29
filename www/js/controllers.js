@@ -71,7 +71,7 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
   $scope.choice='';
   $scope.choice2='';
   $scope.choice3='';
-  $scope.note={brand: ''};
+  $scope.note={brand: '',color: '',smell: '' , taste: '' };
 
     $ionicModal.fromTemplateUrl('templates/help-info.html', {
         scope: $scope,
@@ -145,7 +145,7 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
       $scope.checked = {word: ''};
       $scope.itensitySmel= 3;
       $scope.smell = dataResponse;
-      $scope.smells=$scope.pudge($scope.smell,$scope.checked.word);
+      $scope.smells=[{name:'fruity'},{name:'woody'},{name:'fragrant'},{name:'sickening'},{name:'minty'},{name:'toasted'},{name:'citric'}];
       $scope.refresh=function(){
         $scope.smells=$scope.pudge($scope.smell,$scope.checked.word);
       }
@@ -156,7 +156,7 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
       $scope.checked2 = {word: ''};
       $scope.itensityTaste= 3;
       $scope.taste = dataResponse;
-      $scope.tastes=$scope.pudge($scope.taste,$scope.checked2.word);
+      $scope.tastes=[{name:'sweet'},{name:'sour'},{name:'spicy'},{name:'bitter'},{name:'umami'},{name:'astringent'},{name:'salty'}];
       $scope.refresh2=function(){
         $scope.tastes=$scope.pudge($scope.taste,$scope.checked2.word);
       }
@@ -175,6 +175,17 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
       };
 
     });
+
+  $scope.getcategories=function(array){
+    var array2=[];
+
+    for (var i = 0; i < array.length; i++) {
+      if(!$scope.repeatword(array.category,array2)){
+        array2.push(array[i]);
+      }
+    return array2;
+  }
+    }
     $scope.notes = dataService.getNotes(function(dataResponse) {
       $scope.notes = dataResponse;
     });

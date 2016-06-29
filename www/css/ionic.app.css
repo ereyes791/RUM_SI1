@@ -4472,7 +4472,11 @@ a.subdued {
       background-position: top;
       background-size: 100% 1px;
       background-repeat: no-repeat; } }
-
+a.item {
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
 /* Allow parent element of tabs to define color, or just the tab itself */
 .tabs-light > .tabs,
 .tabs.tabs-light {

@@ -3,32 +3,33 @@
         <div class="list">
             <a class="item item-avatar item item-icon-right" href="#/app/info" ng-click="modalp.hide()">
                 <img src="https://cdn2.iconfinder.com/data/icons/drinks-and-beverage-containers/100/24-512.png">
-                <h2>RUM</h2>
-                <i class="icon ion-checkmark-circled"></i>
+                <h2 >RUM</h2>
+                <i class="icon ion-checkmark-circled" ng-show="note.brand!=''"></i>
+               <i class="icon ion-close-circle"> </i>
             </a>
 
             <a class="item item-avatar item item-icon-right" href="#/app/color" ng-click="modalp.hide()">
                 <img src="https://cdn2.iconfinder.com/data/icons/gears-wheels-blades/512/color_wheel-512.png">
-                <i class="icon ion-checkmark-circled"></i>
+                <i class="icon ion-checkmark-circled" ng-show="note.color!=''"></i>
                 <h2>COLOR</h2>
             </a>
 
             <a class="item item-avatar item item-icon-right" href="#/app/smell" ng-click="modalp.hide()">
                 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/86535-200.png">
-                <i class="icon ion-checkmark-circled"></i>
+                <i class="icon ion-checkmark-circled" ng-show="note.smell!=''"></i>
                 <h2>SMELL</h2>
 
             </a>
 
             <a class="item item-avatar item item-icon-right" href="#/app/taste" ng-click="modalp.hide()">
                 <img src="https://cdn3.iconfinder.com/data/icons/wine-and-vineyard-icons/512/Wine_tasting_1-512.png">
-                <i class="icon ion-checkmark-circled"></i>
+                <i class="icon ion-checkmark-circled" ng-show="note.taste!=''"></i>
                 <h2>TASTE</h2>
             </a>
             <a class="item item-avatar item item-icon-right" href="#/app/color" ng-click="modalp.hide()">
                 <img src="http://simpleicon.com/wp-content/uploads/note-2.png">
-                <i class="icon ion-checkmark-circled"></i>
-                <h2>NOTE</h2>
+
+                <h2>POST</h2>
             </a>
 
             <a class="button button-full button-light-red" ng-click="modalp.hide()">
