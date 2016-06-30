@@ -27,41 +27,11 @@
             </div>
 
             <ion-radio class="selection" ng-repeat="brand in brand" name="group1"  ng-if="brand.brand==checked3.word" ng-model="note.brand">{{brand.brand}}</ion-radio>
-            <div ng-if="checked3.word!=''">
+            <div ng-if="checked3.word=='cacique'">
                 <h2>Name</h2>
 
                 <ion-radio name="group2" class="selection" ng-repeat="rumName in rum" ng-if="rumName.brand==checked3.word" ng-model="note.rumName">{{rumName.name}}</ion-radio>
 
-                <h2>Year</h2>
-                <label class="item item-input item-select">
-                    <div><br><br><br>
-                        <select ng-model="note.age">
-                            <option value="" selected>----</option>
-                            <!--Caveman way of doing this. Need to fix-->
-                            <option> 2015 </option>
-                            <option> 2014 </option>
-                            <option> 2013 </option>
-                            <option> 2012 </option>
-                            <option> 2011 </option>
-                            <option> 2010 </option>
-                            <option> 2009 </option>
-                            <option> 2008 </option>
-                            <option> 2007 </option>
-                            <option> 2006 </option>
-                            <option> 2005 </option>
-                            <option> 2004 </option>
-                            <option> 2003 </option>
-                            <option> 2002 </option>
-                            <option> 2001 </option>
-                            <option> 2000 </option>
-                            <option> 1999 </option>
-                            <option> 1998 </option>
-                            <option> 1997 </option>
-                            <option> 1996 </option>
-
-                        </select>
-                    </div>
-                </label>
             </div>
             <!--Selectors and labels-->
             <!--  <div class="input-label">
