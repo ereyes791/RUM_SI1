@@ -66,7 +66,7 @@ this.getColor = function(callbackFunc) {
     }
 });
 
-ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ionicModal,$ionicSideMenuDelegate) {
+ctrl.controller('tasteNotecontroller', function($scope, dataService, $http,$ionicPopup, $ionicModal,$ionicSideMenuDelegate) {
   $scope.toggleLeft = function(){$ionicSideMenuDelegate.toggleLeft();};
   $scope.choice='';
   $scope.choice2='';
@@ -135,6 +135,20 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http, $ion
     };
     $scope.closeModal = function() {
         $scope.modalt.hide();
+    };
+
+    $scope.showPopup = function() {
+        var confirmPopup = $ionicPopup.confirm({
+            title: 'Postear la Nota',
+            template: '¿Estas seguro que deseas postear la Nota?'
+        });
+        confirmPopup.then(function(res) {
+            if(res) {
+                console.log('You clicked on "OK" button');
+            } else {
+                console.log('You clicked on "Cancel" button');
+            }
+        });
     };
 
     $scope.color = dataService.getColor(function(dataResponse) {
