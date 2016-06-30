@@ -4,6 +4,11 @@
 <<<<<<< HEAD
     <list default="true" id="5fdc1395-ef2b-41e8-a5cf-26ff13fc7c5e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="5fdc1395-ef2b-41e8-a5cf-26ff13fc7c5e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/Progress.html" afterPath="$PROJECT_DIR$/www/templates/Progress.html" />
@@ -12,6 +17,7 @@
 =======
     <list default="true" id="5fdc1395-ef2b-41e8-a5cf-26ff13fc7c5e" name="Default" comment="" />
 >>>>>>> 7ead5e206fee08cd57837f9172a07d1951021b3c
+>>>>>>> refs/remotes/origin/master
     <ignored path="RUM_SI1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -163,7 +169,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18036072">
+            <state vertical-scroll-proportion="-3.9378757">
               <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
 >>>>>>> 7ead5e206fee08cd57837f9172a07d1951021b3c
               <folding />
@@ -946,14 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/taste.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3529413">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.3529413">
@@ -975,9 +973,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/taste.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3529413">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18036072">
+        <state vertical-scroll-proportion="-3.9378757">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
 >>>>>>> 7ead5e206fee08cd57837f9172a07d1951021b3c
           <folding />
