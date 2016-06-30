@@ -141,10 +141,13 @@ ctrl.controller('tasteNotecontroller', function($scope, dataService, $http,$ioni
         var confirmPopup = $ionicPopup.confirm({
             title: 'Postear la Nota',
             template: '¿Estas seguro que deseas postear la Nota?'
+
+
         });
         confirmPopup.then(function(res) {
             if(res) {
                 console.log('You clicked on "OK" button');
+
             } else {
                 console.log('You clicked on "Cancel" button');
             }
